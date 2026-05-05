@@ -32,8 +32,9 @@ if st.button("Predict"):
     certifications,
     backlogs
 ]])
-
     
+
+    st.write("Input shape:", input_data.shape)
 
     prediction = model.predict(input_data)
 
