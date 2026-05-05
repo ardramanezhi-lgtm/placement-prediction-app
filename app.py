@@ -4,7 +4,7 @@ import pickle
 
 # Load model and scaler
 model = pickle.load(open("model.pkl", "rb"))
-scaler = pickle.load(open("scaler.pkl", "rb"))
+
 
 st.title("🎓 Student Placement Prediction")
 
@@ -23,7 +23,7 @@ if st.button("Predict"):
     input_data = np.array([[cgpa, internships, projects, coding, communication,
                             aptitude, soft, certifications, backlogs]])
 
-    input_data = scaler.transform(input_data)
+    
 
     prediction = model.predict(input_data)
 
