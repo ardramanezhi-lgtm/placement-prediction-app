@@ -21,23 +21,22 @@ certifications = st.number_input("Certifications", 0, 5)
 backlogs = st.number_input("Backlogs", 0, 10)
 if st.button("Predict"):
     input_data = np.array([[
-    cgpa,
-    internships,
-    projects,
-    coding,
-    communication,
-    aptitude,
-    soft,
-    certifications,
-    backlogs
-]])
-    
+        cgpa,
+        internships,
+        projects,
+        coding,
+        communication,
+        aptitude,
+        soft,
+        certifications,
+        backlogs
+    ]])
 
     st.write("Input shape:", input_data.shape)
 
     prediction = model.predict(input_data)
 
     if prediction[0] == 1:
-        st.success("✅ Student will be Placed")
+        st.success("🎉 Student WILL be Placed")
     else:
         st.error("❌ Student will NOT be Placed")
