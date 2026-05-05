@@ -9,7 +9,7 @@ model = pickle.load(open("model.pkl", "rb"))
 st.title("🎓 Student Placement Prediction")
 
 # Inputs
-age = st.number_input("Age", 18, 30)
+
 cgpa = st.number_input("CGPA", 0.0, 10.0)
 internships = st.number_input("Internships", 0, 5)
 projects = st.number_input("Projects", 0, 10)
@@ -21,7 +21,6 @@ certifications = st.number_input("Certifications", 0, 5)
 backlogs = st.number_input("Backlogs", 0, 10)
 if st.button("Predict"):
     input_data = np.array([[
-    age,
     cgpa,
     internships,
     projects,
